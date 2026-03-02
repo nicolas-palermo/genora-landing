@@ -14,25 +14,25 @@ const stats = [
     delay: 0,
   },
   {
-    prefix: 'USD',
-    number: '42',
-    numberSuffix: ',000,000,000',
-    desc: 'Costo anual global por no considerar la variabilidad genética',
-    source: 'OMS / Global Report',
-    delay: 100,
-  },
-  {
     number: '75',
     unit: '%',
     desc: 'De las reacciones adversas evitables están asociadas a solo 3 genes',
     source: 'CPIC Guidelines',
-    delay: 200,
+    delay: 100,
   },
   {
     number: '60',
     unit: '%',
     desc: 'De los pacientes están expuestos a reacciones adversas prevenibles',
     source: 'FDA / Clinical Data',
+    delay: 200,
+  },
+  {
+    prefix: 'USD',
+    number: '42',
+    numberSuffix: ',000,000,000',
+    desc: 'Costo anual global por no considerar la variabilidad genética',
+    source: 'OMS / Global Report',
     delay: 300,
   },
   {
@@ -226,6 +226,64 @@ export default function App() {
               </a>
             </div>
           </div>
+        </section>
+
+        {/* VISION / MISSION */}
+        <section style={{ marginBottom: '26vh' }}>
+          <SectionLabel>VISIÓN — MISIÓN</SectionLabel>
+
+          <blockquote style={{
+            margin: 0,
+            padding: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '50vh',
+            textAlign: 'center',
+          }}>
+            <p style={{
+              fontSize: 'clamp(1.6rem, 2.8vw, 2.8rem)',
+              fontWeight: 500,
+              lineHeight: 1.1,
+              letterSpacing: '-0.03em',
+              textTransform: 'uppercase',
+              maxWidth: '22ch',
+              margin: '0 auto',
+              marginBottom: '1rem',
+            }}>
+              Medicina ultra personalizada, al alcance de todos.
+            </p>
+            <p style={{
+              fontSize: 'clamp(1.6rem, 2.8vw, 2.8rem)',
+              fontWeight: 400,
+              fontStyle: 'italic',
+              lineHeight: 1.1,
+              letterSpacing: '-0.02em',
+              maxWidth: '22ch',
+              margin: '0 auto',
+              marginBottom: '2.5rem',
+              color: 'rgba(0,0,0,0.5)',
+            }}>
+              Hoy. Para siempre.
+            </p>
+            <a
+              href="mailto:demo@genora.com"
+              style={{
+                display: 'inline-block',
+                background: '#E8573A',
+                color: '#fff',
+                textDecoration: 'none',
+                padding: '1rem 2rem',
+                fontSize: '0.75rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.15em',
+                fontWeight: 500,
+              }}
+            >
+              Solicitar Demo →
+            </a>
+          </blockquote>
         </section>
 
         {/* FOOTER */}
