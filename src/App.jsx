@@ -102,7 +102,7 @@ export default function App() {
           {/* HERO */}
           <header>
             <h1 style={{
-              fontSize: 'clamp(3rem, 6vw, 4rem)',
+              fontSize: 'clamp(3rem, 6vw, 6rem)',
               fontWeight: 500,
               lineHeight: 0.9,
               letterSpacing: '-0.03em',
@@ -113,7 +113,7 @@ export default function App() {
               display: 'flex',
               flexDirection: 'column'
             }}>
-              Medicina personalizada
+              Medicina molecular
             </h1>
             <p style={{
               fontSize: '0.9rem',
