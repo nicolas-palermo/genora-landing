@@ -1,0 +1,93 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  height: auto;
+}
+
+body {
+  background-color: #F0EFEC;
+  color: #000000;
+  overflow-y: auto;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* Layout classes for responsive grids */
+
+.page-wrapper {
+  position: relative;
+  z-index: 2;
+  padding: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.stats-grid > div {
+  border-right: 1px solid rgba(0,0,0,0.12);
+}
+
+.stats-grid > div:last-child {
+  border-right: none;
+}
+
+.solution-grid,
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats-grid > div:nth-child(3n) {
+    border-right: none;
+  }
+
+  .solution-grid,
+  .cta-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  .page-wrapper {
+    padding: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid > div:nth-child(3n) {
+    border-right: 1px solid rgba(0,0,0,0.12);
+  }
+
+  .stats-grid > div:nth-child(2n) {
+    border-right: none;
+  }
+}
